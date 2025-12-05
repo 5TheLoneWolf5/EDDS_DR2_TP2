@@ -5,7 +5,7 @@
 * Os passos da solução seguem:
 * Primeiro, a criação de uma classe "Cliente" para representar os dados dessa entidade.
 * Criação da interface "Classificador".
-* Implementação da interface "Classificador" e do método para cada tipo (Sênior, Regular etc.), ao mesmo que todos extendem o comportamento de "Cliente" (mesmo o padrão).
-* Desse modo, ao chamar o método classificar() do objeto Cliente ou outro que extenda seu comportamento, o comportamento continuará mas de modo mais limpo, legível e escalável.   
+* Implementação da interface "Classificador" em cada tipo (Sênior, Regular, cliente padrão e etc.), ao mesmo que todos extendem o comportamento de "Cliente".
+* Desse modo, ao chamar o método classificar() no objeto Cliente ou outro que extenda seu comportamento, o comportamento permanecerá de modo mais limpo, legível e escalável (tendo as regras de negócio aplicadas em cada classe).   
 *
 */
