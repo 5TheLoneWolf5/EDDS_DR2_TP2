@@ -15,8 +15,11 @@ public class App {
 }
 
 public class Cliente {
+
+    // Abstração: variáveis da classe, construtores e getters and setters.
+    
     public String classificar(Cliente cliente) {
-          if (ehClienteIdoso(cliente.idade)) {
+          if (ehClienteIdoso(cliente.getIdade())) {
             return classificarClienteSenior(cliente) + " Sênior";
           } else {
             return classificarClienteJovem(cliente) + " Jovem";
@@ -28,7 +31,7 @@ public class Cliente {
     }
 
   public String classificarClienteSenior(Cliente cliente) {
-          if (ehClienteSeniorBaixaRenda(cliente.renda)) {
+          if (ehClienteSeniorBaixaRenda(cliente.getRenda())) {
             return "Cliente Baixa Renda";
           } else {
             return classificarSeniorClienteRegularPremium(cliente);
@@ -40,7 +43,7 @@ public class Cliente {
   }
 
   public String classificarClienteJovem(Cliente cliente) {
-          if (ehClienteJovemBaixaRenda(cliente.renda)) {
+          if (ehClienteJovemBaixaRenda(cliente.getRenda())) {
             return "Cliente Baixa Renda";
           } else {
             return classificarJovemClienteRegularPremium(cliente);
@@ -52,7 +55,7 @@ public class Cliente {
     }
 
   public String classificarSeniorClienteRegularPremium(Cliente cliente) {
-          if (ehClienteSeniorPremium(cliente.compras)) {
+          if (ehClienteSeniorPremium(cliente.getCompras())) {
             return "Cliente Premium";
           } else {
             return "Cliente Regular";
